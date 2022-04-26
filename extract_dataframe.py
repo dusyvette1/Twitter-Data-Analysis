@@ -35,33 +35,37 @@ class TweetDfExtractor:
 
     # an example function
     def find_statuses_count(self)->list:
-        statuses_count 
+
+        return self.tweets_list['statuses_count']
         
     def find_full_text(self)->list:
-        text = 
+        return self.tweets_list['original_text']
        
     
     def find_sentiments(self, text)->list:
         
-        return polarity, self.subjectivity
+        return [self.tweets_list.polarity, self.tweets_list.subjectivity]
 
     def find_created_time(self)->list:
        
-        return created_at
+        return self.tweets_list['created_at']
 
     def find_source(self)->list:
-        source = 
+        source = self.tweets_list['source']
 
         return source
 
     def find_screen_name(self)->list:
-        screen_name = 
+        screen_name = self.tweets_list['screen_name']
+        return screen_name
 
     def find_followers_count(self)->list:
-        followers_count = 
+        followers_count = self.tweets_list['followers_count']
+        return followers_count
 
     def find_friends_count(self)->list:
-        friends_count = 
+        friends_count = self.tweets_list['friends_count']
+        return friends_count
 
     def is_sensitive(self)->list:
         try:
@@ -72,16 +76,19 @@ class TweetDfExtractor:
         return is_sensitive
 
     def find_favourite_count(self)->list:
-        
+        return self.tweets_list['favorite_count']
     
     def find_retweet_count(self)->list:
-        retweet_count = 
+        retweet_count = self.tweets_list['retweet_count']
+        return retweet_count
 
     def find_hashtags(self)->list:
-        hashtags =
+        hashtags = self.tweets_list['hashtags']
+        return hashtags
 
     def find_mentions(self)->list:
-        mentions = 
+        mentions = self.tweets_list['mentions']
+        return mentions
 
 
     def find_location(self)->list:
@@ -91,6 +98,8 @@ class TweetDfExtractor:
             location = ''
         
         return location
+    def find_lang(self):
+        return self.tweets_list['lang']
 
     
         
